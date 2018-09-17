@@ -17,6 +17,7 @@
 
         body {
             background-color: lightblue;
+            animation: sky 15s linear infinite;
         }
 
         button {
@@ -231,12 +232,87 @@
             opacity: 0;
         }
 
+        body div.sun {
+            height: 8vw;
+            width: 8vw;
+            background-color: yellow;
+            border-radius: 50%;
+            top: 10vh;
+            left: 50vw;
+            animation: sun 15s linear infinite;
+            z-index: -3;
+        }
+
         h1 {
             font-family: 'Saira', sans-serif;
             text-align: right;
             padding: 2vh;
             opacity: 0;
             transition: 4.2s 2.2s;
+        }
+
+        @keyframes sky {
+            0% {
+                background-color: lightblue;
+
+
+
+            }
+
+            15% {
+                background-color: rgba(201, 120, 109, 0.822);
+            }
+
+            25% {
+                background-color: rgb(102, 101, 101);
+
+            }
+
+
+
+            60% {
+                background-color: rgba(201, 120, 109, 0.822);
+            }
+
+            100% {
+                background-color: lightblue;
+            }
+        }
+
+        @keyframes sun {
+            0% {
+                background-color: yellow;
+                top: 10vh;
+                left: 50vw;
+
+            }
+
+            25% {
+                background-color: rgb(139, 23, 23);
+                top: 54vh;
+                left: 80vw;
+            }
+
+            26% {
+
+
+                left: 10vw;
+            }
+
+
+
+            60% {
+
+
+                top: 40%;
+                left: 20%;
+            }
+
+            100% {
+                background-color: yellow;
+                top: 10vh;
+                left: 50vw;
+            }
         }
     </style>
 </head>
@@ -257,7 +333,8 @@
     <div></div>
     <div></div>
     <div></div>
-    <h1>A responsive picture consisted of 14 divs</h1>
+    <div class="sun"></div>
+    <h1>A responsive, animated picture consisted of 15 divs</h1>
 </body>
 
 </html>
